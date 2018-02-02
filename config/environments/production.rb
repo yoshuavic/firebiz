@@ -10,6 +10,8 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  config.action_mailer.raise_delivery_errors = false
+
   config.action_mailer.delivery_method= :smtp
   #SMTP Setting for gmail
   config.action_mailer.smtp_settings= {
