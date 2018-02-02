@@ -16,20 +16,19 @@ Rails.application.configure do
   #SMTP Setting for gmail
   #config.action_mailer.mailgun_settings = {domain: 'sandboxb882df834cd54e54b094e1740528271d.mailgun.org'}
 
-  config.action_mailer.default_url_options = { :host => 'registration-firebiz.herokuapp.com' }  
+  #config.action_mailer.default_url_options = { :host => 'registration-firebiz.herokuapp.com' }  
   config.action_mailer.delivery_method = :smtp  
   config.action_mailer.perform_deliveries = true  
   config.action_mailer.raise_delivery_errors = false  
-  config.action_mailer.default :charset => "utf-8"  
-  config.action_mailer.smtp_settings = {  
-  address: "smtp.gmail.com",
-  port: 587,
-  domain: "registration-firebiz.herokuapp.com",
-  authentication: "plain",
-  enable_starttls_auto: true,
-  user_name: ENV["GMAIL_USERNAME"],
-  password: ENV["GMAIL_PASSWORD"]
-  }
+  #config.action_mailer.default :charset => "utf-8"  
+  config.action_mailer.smtp_settings = {
+    :port           => ENV['MAILGUN_SMTP_PORT'],
+    :address        => ENV['MAILGUN_SMTP_SERVER'],
+    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+    :domain         => 'yourapp.heroku.com',
+    :authentication => :plain
+}
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
