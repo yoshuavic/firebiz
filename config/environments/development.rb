@@ -9,11 +9,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method= :smtp
   #SMTP Setting for gmail
   config.action_mailer.smtp_settings= {
-    address: "smtp.gmail.com",
+    address: "smtp.mailgun.com",
     port: 587,
-    domain: 'gbipcw.org',
-    user_name: 'yoshuavic85@gmail.com',
-    password: 'meet424fact524',
+    domain: 'sandboxd2ca0c77b01a41c5b2c4d08386ac29e2.mailgun.org',
+    user_name: 'postmaster@sandboxd2ca0c77b01a41c5b2c4d08386ac29e2.mailgun.org',
+    password: '89321a2d48a1f3af92c566dc0d82a4d1',
     authentication: 'plain',
     enable_starttls_auto: true
   }
