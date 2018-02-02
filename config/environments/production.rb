@@ -14,7 +14,7 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method= :mailgun
   #SMTP Setting for gmail
-  config.action_mailer.mailgun_settings = {domain: 'sandboxd1bd1e7c67e64abeb6f04a4643c237a2.mailgun.org'}
+  config.action_mailer.mailgun_settings = {domain: 'sandboxb882df834cd54e54b094e1740528271d.mailgun.org'}
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
