@@ -27,7 +27,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",
     :port => 587,
-    :domain "registration-firebiz.herokuapp.com",
+    :domain => "registration-firebiz.herokuapp.com",
     :authentication => :plain,
     :enable_starttls_auto => true,
     :user_name => "yoshuavic85@gmail.com",
