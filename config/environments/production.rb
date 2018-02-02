@@ -10,11 +10,29 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
-  config.action_mailer.raise_delivery_errors = false
+  #config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.delivery_method= :mailgun
+  #config.action_mailer.delivery_method= :mailgun
   #SMTP Setting for gmail
-  config.action_mailer.mailgun_settings = {domain: 'sandboxb882df834cd54e54b094e1740528271d.mailgun.org'}
+  #config.action_mailer.mailgun_settings = {domain: 'sandboxb882df834cd54e54b094e1740528271d.mailgun.org'}
+
+  config.action_mailer.default_url_options = {
+    :host => 'registration-firebiz.herokuapp.com' }
+    
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com"
+    port: 587,
+    domain: "registration-firebiz.herokuapp.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: "yoshuavic85@gmail.com",
+    password: "meet424fact524"
+  }
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
