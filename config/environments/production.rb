@@ -12,17 +12,9 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.delivery_method= :smtp
+  config.action_mailer.delivery_method= :mailgun
   #SMTP Setting for gmail
-  config.action_mailer.smtp_settings= {
-    address: "smtp.mailgun.com",
-    port: 587,
-    domain: 'sandboxd2ca0c77b01a41c5b2c4d08386ac29e2.mailgun.org',
-    user_name: 'postmaster@sandboxd2ca0c77b01a41c5b2c4d08386ac29e2.mailgun.org',
-    password: '89321a2d48a1f3af92c566dc0d82a4d1',
-    authentication: 'plain',
-    enable_starttls_auto: true
-  }
+  config.action_mailer.mailgun_settings = {domain: 'sandboxd1bd1e7c67e64abeb6f04a4643c237a2.mailgun.org'}
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
