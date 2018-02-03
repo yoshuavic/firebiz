@@ -1,6 +1,6 @@
 class RegistersController < ApplicationController
   before_action :set_register, only: [:show, :edit, :update, :destroy]
-  before_action :require_user, only: [:show, :index, :destroy]
+  before_action :require_user, only: [:show, :index]
 
   # GET /registers
   # GET /registers.json
@@ -29,7 +29,7 @@ class RegistersController < ApplicationController
 
     if @register.save
       #send mail
-      UserMailer.signup_confirmation(@register).deliver
+      UserMailer.signup_confirmation(@register).deliver_later
       flash[:success] ="Registration Success"
       redirect_to new_register_path(@user)
     else
