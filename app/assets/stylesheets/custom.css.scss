@@ -56,6 +56,10 @@ $navbar-default-bg: black;
     margin-bottom: 10px;
 }
 
+.form-check{
+    margin: 5px;
+}
+
 .jumbotron {
     background-image: asset-url('busines.png');
     background-size: cover;
@@ -177,6 +181,10 @@ $navbar-default-bg: black;
   @media (max-width: 767px) {
     .card {
       margin-bottom:10px;
+    }
+    .form-check{
+        margin: 5px;
+        text-align: center;
     }
   }
   
