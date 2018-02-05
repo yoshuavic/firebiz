@@ -30,7 +30,7 @@ class RegistersController < ApplicationController
     if @register.save
       #send mail
       UserMailer.signup_confirmation(@register).deliver_later
-      flash[:success] ="Registration Success"
+      flash[:success] ="Registration Success, please check your inbox mail, if registration email didn't appear please check spam inbox"
       redirect_to new_register_path(@user)
     else
       render 'new'
