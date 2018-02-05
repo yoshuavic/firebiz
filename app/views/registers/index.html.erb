@@ -10,6 +10,8 @@
       <th>Gender</th>
       <th>Email</th>
       <th>Phone</th>
+      <th>Address</th>
+      <th>Town</th>
       <th>Shirt</th>
       <th>Action</th>
     </tr>
@@ -23,7 +25,8 @@
         <td><%= register.gender %></td>
         <td><%= register.email %></td>
         <td><%= register.phone %></td>
-        <td><%= register.shirt %></td>
+        <td><%= register.adress %></td>
+        <td><%= register.kota %></td>
         <td><%= link_to 'Show', register %></td>
         <td><%= link_to  "Delete", register_path(register), method: :delete,
                             data: {confirm: "Are you sure you want to delete the user"}  %>

@@ -36,6 +36,16 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-8">
+                    <%= form.text_area :adress, class:"form-control", placeholder:"Address" %>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8">
+                    <%= form.text_field :kota, class:"form-control", placeholder:"Town" %>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-8">
                     <label>Ukuran T-Shirt:</label>
                     <div class="form-check">
                         <%= form.label :shirt, "S", :value => "S", class: "radio-inline"  %>
