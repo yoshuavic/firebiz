@@ -5,6 +5,7 @@
 <table class="table-striped table-hover" width=100%>
   <thead>
     <tr>
+      <th>No.</th>
       <th>First name</th>
       <th>Last name</th>
       <th>Gender</th>
@@ -18,8 +19,10 @@
   </thead>
 
   <tbody>
+    <% i = 0 %>
     <% @registers.each do |register| %>
       <tr>
+        <td><%=  i = i+1 %></td>
         <td><%= register.first_name %></td>
         <td><%= register.last_name %></td>
         <td><%= register.gender %></td>
@@ -27,6 +30,7 @@
         <td><%= register.phone %></td>
         <td><%= register.adress %></td>
         <td><%= register.kota %></td>
+        <td><%= register.shirt %></td>
         <td><%= link_to 'Show', register %></td>
         <td><%= link_to  "Delete", register_path(register), method: :delete,
                             data: {confirm: "Are you sure you want to delete the user"}  %>
